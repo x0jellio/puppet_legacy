@@ -1,4 +1,4 @@
-csfasdfasdflass openldap { 
+openldap { 
 include openldap::install, 
 openldap::config
 }
