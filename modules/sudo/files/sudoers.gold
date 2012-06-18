@@ -77,6 +77,7 @@ Defaults    env_keep = "COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR \
 root	ALL=(ALL) 	ALL
 %admin  ALL=(ALL)       ALL
 jelliott	ALL=(ALL)	ALL
+darren		ALL=(ALL) 	ALL
 ## Allows members of the 'sys' group to run networking, software, 
 ## service management apps and more.
 # %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
@@ -111,3 +112,4 @@ cvale             ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
 deepak             ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
 marksimu             ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
 dconcha             ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
+jmendoza	  ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES      
