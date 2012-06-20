@@ -1,11 +1,24 @@
 class nis_prod::install { 
 
-package { "ypbind":
-ensure => present,
-	}
 
-package { "portmap":
-ensure => present,
+
+if $operatingsystemrelease == "6" {
+
+      package { [
+                   "ypbind",
+                   "rpcbind", ] :
+
+                ensure => installed,
 }
+} elsif $operatingsystemrelease == "5.5" {
 
+
+package { [
+
+                  "ypbind",
+                   "portmap", ] :
+
+                ensure => installed,
+}
+                                }
 }
