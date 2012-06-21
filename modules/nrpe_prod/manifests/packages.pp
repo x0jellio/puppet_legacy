@@ -10,21 +10,29 @@
 #
 # Sample Usage:
 #
+
 class nrpe_prod::packages {
 
-  Package { ensure => installed }
 
-  case $operatingsystem {
-    centos, redhat, oel: {
-      package { 'nagios-plugins-all': }
-      -> package { 'nagios-plugins-file_age': }
-      -> package { 'nagios-plugins': }
-      -> package { 'nagios-nrpe': }
-    }
-    default: {
-      fail("operatingsystem $operatingsystem is not supported")
-    }
-  }
 
+if $operatingsystemrelease  == "6.0" {
+
+      package { [ 
+                   "nagios-plugins",
+                   "nrpe", ] :
+    
+		ensure => installed, 
+}
+} elsif $lsbmajdistrelease == "5" {
+
+
+package { [  
+                
+                  "nagios-plugins",
+                   "nagios-nrpe", ] :
+    
+                ensure => installed,
+	}
+				}
 
 }

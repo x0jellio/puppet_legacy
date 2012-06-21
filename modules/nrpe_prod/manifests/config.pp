@@ -30,29 +30,29 @@ class nrpe_prod::config(
   # Quick hack to deploy the aggregate nagios check.
   # This should really be a defined resource type the end
   # user may consume.
-  file { "${plugdir}/check_mcollective.rb":
-    ensure  => file,
-    content => template("nrpe_prod/check_mcollective.rb"),
-    owner   => '0',
-    group   => '0',
-    mode    => '0755',
-  }
+  #file { "${plugdir}/check_mcollective.rb":
+  #  ensure  => file,
+  #  content => template("nrpe_prod/check_mcollective.rb"),
+  #  owner   => '0',
+  #  group   => '0',
+  #  mode    => '0755',
+  #}
 
-  nrpe_prod::command { 'check_puppet_run':
-    ensure     => 'present',
-    command    => 'check_file_age',
-    parameters => '-f /var/lib/puppet/state/state.yaml -w 5400 -c 7200',
-  }
+  #nrpe_prod::command { 'check_puppet_run':
+  #  ensure     => 'present',
+  #  command    => 'check_file_age',
+  #  parameters => '-f /var/lib/puppet/state/state.yaml -w 5400 -c 7200',
+  #}
 
   # This is a basic check of the file ages for the registration
   # information.  If a node drops off the collective without being
   # unregistered, the check will notify for that system.
-  nrpe_prod::command { 'check_mcollective':
-    ensure     => 'present',
-    command    => 'check_mcollective.rb',
-    parameters => '--directory /var/tmp/mcollective',
-    require    => File["${plugdir}/check_mcollective.rb"],
-  }
+  #nrpe_prod::command { 'check_mcollective':
+  #  ensure     => 'present',
+  #  command    => 'check_mcollective.rb',
+  #  parameters => '--directory /var/tmp/mcollective',
+  #  require    => File["${plugdir}/check_mcollective.rb"],
+  #}
 
   file { '/etc/nagios/nrpe.cfg':
     ensure  => 'file',

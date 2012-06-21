@@ -96,4 +96,5 @@ ccostello	ALL=(ALL)	ALL
 # %users  localhost=/sbin/shutdown -h now
 Cmnd_Alias BECOME_ROCKETAPP =/bin/su - rocketapp 
 
-#marksimu             ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
+jmather             ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
+slau                ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES

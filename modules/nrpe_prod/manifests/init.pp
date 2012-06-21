@@ -10,6 +10,16 @@
 #
 # Sample Usage:
 #
+file { "/etc/nagios":
+    ensure => "directory",
+    owner  => "nagios",
+    group  => "nagios",
+    mode   => 750,
+}
+
+
+
+
 class nrpe_prod(
   $config = undef
 ) {
