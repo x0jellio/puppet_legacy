@@ -1,3 +1,3 @@
 class ssh { 
-include  ssh::config
+include ssh::config
 }
