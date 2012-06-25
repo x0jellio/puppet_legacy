@@ -54,12 +54,16 @@ class nrpe_basic::config(
   #  require    => File["${plugdir}/check_mcollective.rb"],
   #}
 
-  file { '/etc/nagios/nrpe.cfg':
-    ensure  => 'file',
-    owner   => '0',
-    group   => '0',
-    mode    => '644',
-    content => $config_real,
-  }
+### As of Jun 25, 2012, this stanza temporarily commented
+### out to test a new nrpe.cfg in the nrpe_localconf module.
+### When that has been validated, the nrpe.cfg config from 
+### that module should be moved back here. (DKC)
+#  file { '/etc/nagios/nrpe.cfg':
+#    ensure  => 'file',
+#    owner   => '0',
+#    group   => '0',
+#    mode    => '644',
+#    content => $config_real,
+#  }
 
 }
