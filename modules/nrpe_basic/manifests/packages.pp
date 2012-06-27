@@ -1,16 +1,3 @@
-# Class: nrpe_basic::packages
-#
-#   Packages for NRPE
-#
-# Parameters:
-#
-# Actions:
-#
-# Requires:
-#
-# Sample Usage:
-#
-
 class nrpe_basic::packages {
 
 
