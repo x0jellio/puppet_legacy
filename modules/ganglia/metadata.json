@@ -1,0 +1,27 @@
+{
+  "project_page": "UNKNOWN",
+  "summary": "a module to install the ganglia server",
+  "author": "danleyden",
+  "source": "UNKNOWN",
+  "checksums": {
+    "manifests/server.pp": "362dba43c8e94822e8c360a99e04c9dd",
+    "manifests/client.pp": "88553acc5586a597adcc08257164a2cb",
+    "manifests/webserver.pp": "7dd579e37d971871efd75fcdcae78616",
+    "README": "11465d77659443781e7e8f5604860433",
+    "templates/gmetad.conf": "5094bbfb4c7ef8d4d3865a37afa9a38f",
+    "metadata.json": "8a80554c91d9fca8acb82f023de02f11",
+    "templates/gmond.conf": "264c63085225733fb3224a9b6d1e3c6a",
+    "Modulefile": "89644287c0263272e65c9e7ad624fc40",
+    "manifests/init.pp": "f1e7314e801add5a273cab60eabbb0b3"
+  },
+  "dependencies": [
+
+  ],
+  "license": "UNKNOWN",
+  "version": "0.0.1",
+  "name": "danleyden-ganglia",
+  "types": [
+
+  ],
+  "description": "supports installation of various parts of ganglia"
+}

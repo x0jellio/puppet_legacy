@@ -1,0 +1,39 @@
+[agent]
+archive_file_server = puppet
+authconfig = /etc/puppet/namespaceauth.conf
+logdir = /var/lib/puppet/log
+pluginsource = puppet://puppet/plugins
+node_terminus = plain
+certdir = /etc/puppet/ssl/certs
+factpath = /var/lib/puppet/facts
+inventory_terminus = facter
+requestdir = /etc/puppet/ssl/certificate_requests
+passfile = /etc/puppet/ssl/private/password
+ssldir = /etc/puppet/ssl
+#factdest = /var/lib/puppet/facts/
+httplog = /var/lib/puppet/log/http.log
+privatekeydir = /etc/puppet/ssl/private_keys
+facts_terminus = facter
+factsource = puppet://puppet/facts/
+libdir = /var/lib/puppet/lib
+hostcert = /etc/puppet/ssl/certs/<%= hostname %>f1p.rl.pem
+certname = <%= hostname %>.f1p.rl.com 
+localcacert = /etc/puppet/ssl/certs/ca.pem
+splaylimit = 1800
+clientyamldir = /var/lib/puppet/client_yaml
+report_port = 8140
+listen = true
+report = true
+lastrunfile = /var/lib/puppet/state/last_run_summary.yaml
+splay = false
+reportserver = puppet
+puppetport = 8139
+inventory_server = puppet
+ca_server = puppet
+report_server = puppet
+runinterval = 3600 
+inventory_port = 8140
+ca_port = 8140
+
+pluginsync=false
+plugindest=/var/lib/puppet/lib
