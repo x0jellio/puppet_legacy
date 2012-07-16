@@ -16,23 +16,6 @@ recurse => true,
 mode => 00644
         }
 
-file { "/database/cassandra":
-ensure => directory,
-owner => 'rocketapp',
-group => 'rocketapp',
-mode => 00644,
-recurse => true
-        }
-
-file {"/var/log/cassandra":
-ensure => directory,
-owner => 'rocketapp',
-group => 'rocketapp',
-mode => 00644,
-recurse => true
-        }
-
-
 file {"/var/log/redirectListener":
 ensure => directory,
 owner => 'rocketapp',

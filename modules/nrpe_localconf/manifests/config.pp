@@ -72,6 +72,26 @@ class nrpe_localconf::config {
         	notify  => Class['nrpe_basic::service'],
 	}
 
+	file { "/etc/nagios/configs-available/mgmt.cfg":
+		ensure 	=> present,
+		owner	=> 'nagios',
+		group	=> 'nagios',
+		mode	=> 0640,
+		source	=> "puppet:///modules/nrpe_localconf/mgmt.cfg",
+        	require => Class['nrpe_basic::packages'],
+        	notify  => Class['nrpe_basic::service'],
+	}
+
+	file { "/etc/nagios/configs-available/http-frontend.cfg":
+		ensure 	=> present,
+		owner	=> 'nagios',
+		group	=> 'nagios',
+		mode	=> 0640,
+		source	=> "puppet:///modules/nrpe_localconf/http-frontend.cfg",
+        	require => Class['nrpe_basic::packages'],
+        	notify  => Class['nrpe_basic::service'],
+	}
+
 	#### These next two config files are not included in any 
 	#### existing config, but did show up on many of the machines,
 	#### so I put them here, anyway.
