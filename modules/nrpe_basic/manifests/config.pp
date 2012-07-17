@@ -49,6 +49,14 @@ File {
 		source	=> "puppet:///modules/nrpe_localconf/system-had.cfg",
 	}
 
+	file { "/etc/nagios/configs-available/http-frontend.cfg":
+		source	=> "puppet:///modules/nrpe_localconf/http-frontend.cfg",
+	}
+
+	file { "/etc/nagios/configs-available/mgmt.cfg":
+		source	=> "puppet:///modules/nrpe_localconf/http-frontend.cfg",
+	}
+
 	file { "/etc/nagios/configs-available/check_puppet_run.cfg":
 		ensure 	=> absent,
 	}

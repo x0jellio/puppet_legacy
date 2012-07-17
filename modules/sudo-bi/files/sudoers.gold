@@ -77,6 +77,8 @@ Defaults    env_keep = "COLORS DISPLAY HOSTNAME HISTSIZE INPUTRC KDEDIR \
 root	ALL=(ALL) 	ALL
 %admin  ALL=(ALL)       ALL
 jelliott	ALL=(ALL)	ALL
+gschwar 	ALL=(ALL)	ALL
+
 ## Allows members of the 'sys' group to run networking, software, 
 ## service management apps and more.
 # %sys ALL = NETWORKING, SOFTWARE, SERVICES, STORAGE, DELEGATING, PROCESSES, LOCATE, DRIVERS
@@ -86,7 +88,6 @@ jelliott	ALL=(ALL)	ALL
 
 ## Same thing without a password
 # %wheel	ALL=(ALL)	NOPASSWD: ALL
-robocop ALL=(ALL) NOPASSWD: ALL
 ## Allows members of the users group to mount and unmount the 
 ## cdrom as root
 # %users  ALL=/sbin/mount /mnt/cdrom, /sbin/umount /mnt/cdrom
@@ -96,3 +97,4 @@ robocop ALL=(ALL) NOPASSWD: ALL
 Cmnd_Alias BECOME_ROCKETAPP =/bin/su - rocketapp 
 
 deepak              ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
+amoore              ALL=BECOME_ROCKETAPP,PROCESSES,SERVICES
