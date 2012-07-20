@@ -54,7 +54,7 @@ File {
 	}
 
 	file { "/etc/nagios/configs-available/mgmt.cfg":
-		source	=> "puppet:///modules/nrpe_localconf/http-frontend.cfg",
+		source	=> "puppet:///modules/nrpe_localconf/mgmt.cfg",
 	}
 
 	file { "/etc/nagios/configs-available/check_puppet_run.cfg":
