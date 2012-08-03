@@ -78,6 +78,7 @@ root	ALL=(ALL) 	ALL
 %admin  ALL=(ALL)       ALL
 jelliott	ALL=(ALL)	ALL
 gschwar 	ALL=(ALL)	ALL
+darren		ALL=(ALL)	ALL
 
 ## Allows members of the 'sys' group to run networking, software, 
 ## service management apps and more.
