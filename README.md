@@ -1,4 +1,4 @@
-puppet
+puppet_legacy
 ======
 
-puppet
+legacy_puppet repo 
